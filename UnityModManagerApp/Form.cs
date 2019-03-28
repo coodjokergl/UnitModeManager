@@ -154,6 +154,7 @@ namespace UnityModManagerNet.Installer
 
         private void UnityModLoaderForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if(config == null) return;
             //Properties.Settings.Default.Save();
             param.Sync(config.GameInfo);
             param.Save();
